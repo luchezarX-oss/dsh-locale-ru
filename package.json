@@ -1,0 +1,49 @@
+{
+  "name": "dsh-locale-ru",
+  "version": "0.2.0",
+  "description": "Russian language pack for the DSH web GUI: registers the ru locale and Russian dictionaries.",
+  "license": "MIT",
+  "author": "LuchezarX",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luchezarX-oss/dsh-locale-ru.git"
+  },
+  "homepage": "https://github.com/luchezarX-oss/dsh-locale-ru#readme",
+  "bugs": {
+    "url": "https://github.com/luchezarX-oss/dsh-locale-ru/issues"
+  },
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./client.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "client.js",
+    "cordis.patch.yml",
+    "README.md"
+  ],
+  "keywords": [
+    "dsh-plugin",
+    "deepseek-harness",
+    "dsh",
+    "locale",
+    "i18n",
+    "russian",
+    "ru"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-locale"
+      ]
+    }
+  }
+}

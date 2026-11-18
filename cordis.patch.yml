@@ -1,0 +1,5 @@
+# Inserts this language pack into the profile's layer stack.
+# The id is the config row id; the name must match package.json.
+- insert:
+    - id: dsh-locale-ru
+      name: 'dsh-locale-ru'
